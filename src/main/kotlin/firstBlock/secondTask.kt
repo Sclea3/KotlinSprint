@@ -1,6 +1,6 @@
 package firstBlock
 
-    fun secondTask() {
+    fun main() {
         val ordersCount = 75
         val greetingText = "Thanks for purchasing"
 
@@ -9,7 +9,4 @@ package firstBlock
 //        print(workerCount)
         workerCount = 1999
         print(workerCount)
-    }
-    fun main() {
-        secondTask()
     }
