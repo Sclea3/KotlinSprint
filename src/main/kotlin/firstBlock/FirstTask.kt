@@ -1,9 +1,6 @@
 package firstBlock
 
-class FirstTask {
-
     fun firstTask() {
-        val ordersCount: Int = 75
-        val greetingText: String = "Thanks for purchasing"
+        val ordersCount = 75
+        val greetingText = "Thanks for purchasing"
     }
-}
