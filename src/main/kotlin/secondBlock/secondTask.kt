@@ -7,8 +7,9 @@ fun main() {
     val internPersonalSalary = 20000
 
     val staffSalary = staffCount * staffPersonalSalary
-    val commonSalary = staffSalary + (internPersonalSalary * internCount)
-
+    val internSalary = internCount * internPersonalSalary
+    val commonSalary = staffSalary + (internSalary)
     val averageSalaryPerEmployee = commonSalary / (internCount + staffCount)
+
     print("Staff salary: $staffSalary\nCommon salary: $commonSalary\nAverage salary: $averageSalaryPerEmployee")
 }
