@@ -1,10 +1,9 @@
 package secondBlock
 
 fun main() {
-    val firstGrade = 3
-    val secondGrade = 4
-    val thirdGrade = 3
-    val fourthGrade = 5
-    val finalGrade: Double = (firstGrade + secondGrade + thirdGrade + fourthGrade) / 4.0
-    println(finalGrade)
+    val studentScores = arrayOf(3, 4, 3, 5)
+    val sum = studentScores.sum()
+    val average = sum.toDouble() / studentScores.size
+
+    println("%.2f".format(average))
 }
