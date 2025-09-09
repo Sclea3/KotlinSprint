@@ -1,4 +1,4 @@
-package firstBlock
+package firstLesson
 
 fun main(){
     val length: Long = 40_868_600_000

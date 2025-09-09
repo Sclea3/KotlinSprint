@@ -1,4 +1,4 @@
-package firstBlock
+package firstLesson
 
 fun main() {
     val ordersCount = 75

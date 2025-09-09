@@ -1,4 +1,4 @@
-package firstBlock
+package firstLesson
 
 const val SECONDS_IN_MINUTE = 60
 const val MINUTES_IN_HOUR = 60
