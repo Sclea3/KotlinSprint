@@ -1,7 +1,7 @@
 package secondBlock
 
 fun main() {
-    val buffPercent = 0.2
+    val buffPercent = 20
     val minedIron = 11
     val minedCrystal = 7
 
@@ -10,6 +10,6 @@ fun main() {
     print("Bonus iron: $bonusIron\nBonus crystals: $bonusCrystals")
 }
 
-fun bonusResources(buffPercent: Double, baseValue: Int): Int {
-    return (buffPercent * baseValue).toInt()
+fun bonusResources(buffPercent: Int, baseValue: Int): Int {
+    return (baseValue * buffPercent / 100.0).toInt()
 }
