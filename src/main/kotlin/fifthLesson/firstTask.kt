@@ -1,4 +1,4 @@
-package FifthLesson
+package fifthLesson
 
 fun main() {
     val firstInt = (1..99).random()
