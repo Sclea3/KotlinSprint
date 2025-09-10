@@ -1,3 +1,5 @@
+package fourthLesson
+
 data class WeatherForBeans(
     val isSunny: Boolean,
     val isAwningOpen: Boolean,
