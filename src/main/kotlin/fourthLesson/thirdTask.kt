@@ -1,5 +1,3 @@
-package fourthLesson
-
 data class WeatherForBeans(
     val isSunny: Boolean,
     val isAwningOpen: Boolean,
@@ -14,14 +12,16 @@ fun main() {
         humidity = 20,
         season = "winter",
     )
-    val perfectWeather = WeatherForBeans(
-        isSunny = true,
-        isAwningOpen = true,
-        humidity = 20,
-    )
-    println(chechIsWeatherSuitable(todayWeather, perfectWeather))
+
+    println(checkIsWeatherSuitable(todayWeather))
 }
 
-fun chechIsWeatherSuitable(todayWeather: WeatherForBeans, perfectWeather: WeatherForBeans): String {
-    return "Благоприятные ли условия сейчас для роста бобовых? ${todayWeather.isSunny == perfectWeather.isSunny && todayWeather.isAwningOpen == perfectWeather.isAwningOpen && todayWeather.humidity == perfectWeather.humidity && todayWeather.season != "winter"}"
+fun checkIsWeatherSuitable(weather: WeatherForBeans): String {
+    val isSuitable = weather.isSunny &&
+            weather.isAwningOpen &&
+            weather.humidity == 20 &&
+            weather.season != null &&
+            weather.season != "winter"
+
+    return "Благоприятные ли условия сейчас для роста бобовых? $isSuitable"
 }
