@@ -1,43 +1,18 @@
 package fourthLesson
 
-data class WeightCategory(
-    val name: String,
-    val minWeight: Int,
-    val maxWeight: Int,
-    val maxVolume: Int,
-)
-
-data class Ship(
-    val weight: Int,
-    val volume: Int,
-)
-
 fun main() {
-    val categoryAverage = WeightCategory(
-        name = "Average",
-        minWeight = 35,
-        maxWeight = 100,
-        maxVolume = 100,
-    )
-    val shipOne = Ship(
-        weight = 42,
-        volume = 120,
-    )
-    println(printIsShipFitReqs(categoryAverage = categoryAverage, ship = shipOne))
+    val minWeight = 35
+    val maxWeight = 100
+    val maxVolume = 100
 
-    val shipTwo = Ship(
-        weight = 20,
-        volume = 80
+    val ships = listOf(
+        Pair(42, 120),  // вес, объем
+        Pair(20, 80),
+        Pair(50, 100)
     )
-    println(printIsShipFitReqs(categoryAverage = categoryAverage, ship = shipTwo))
 
-    val shipThree = Ship(
-        weight = 50,
-        volume = 100,
-    )
-    println(printIsShipFitReqs(categoryAverage = categoryAverage, ship = shipThree))
-}
-
-fun printIsShipFitReqs(categoryAverage: WeightCategory, ship: Ship,): String {
-    return "Груз с весом ${ship.weight} кг и объемом ${ship.volume} л соответствует категории 'Average': ${(categoryAverage.minWeight < ship.weight) && (ship.weight <= categoryAverage.maxWeight) && (ship.volume < categoryAverage.maxVolume)}"
+    for ((weight, volume) in ships) {
+        val fits = weight > minWeight && weight <= maxWeight && volume < maxVolume
+        println("Груз с весом $weight кг и объемом $volume л соответствует категории 'Average': $fits")
+    }
 }
