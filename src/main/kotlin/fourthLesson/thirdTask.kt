@@ -1,19 +1,16 @@
 package fourthLesson
 
-// Константы для идеальных условий
 const val PERFECT_IS_SUNNY = true
 const val PERFECT_IS_AWNING_OPEN = true
 const val PERFECT_HUMIDITY = 20
 const val BAD_SEASON = "winter"
 
 fun main() {
-    // Сегодняшняя погода
     val isSunny = true
     val isAwningOpen = true
     val humidity = 20
     val season = "winter"
 
-    // Проверяем условия
     val isSuitable = isSunny == PERFECT_IS_SUNNY &&
             isAwningOpen == PERFECT_IS_AWNING_OPEN &&
             humidity == PERFECT_HUMIDITY &&
