@@ -1,29 +1,23 @@
 package fourthLesson
 
-data class WeatherForBeans(
-    val isSunny: Boolean,
-    val isAwningOpen: Boolean,
-    val humidity: Int,
-    val season: String? = null,
-)
+// Константы для идеальных условий
+const val PERFECT_IS_SUNNY = true
+const val PERFECT_IS_AWNING_OPEN = true
+const val PERFECT_HUMIDITY = 20
+const val BAD_SEASON = "winter"
 
 fun main() {
-    val todayWeather = WeatherForBeans(
-        isSunny = true,
-        isAwningOpen = true,
-        humidity = 20,
-        season = "winter",
-    )
+    // Сегодняшняя погода
+    val isSunny = true
+    val isAwningOpen = true
+    val humidity = 20
+    val season = "winter"
 
-    println(checkIsWeatherSuitable(todayWeather))
-}
+    // Проверяем условия
+    val isSuitable = isSunny == PERFECT_IS_SUNNY &&
+            isAwningOpen == PERFECT_IS_AWNING_OPEN &&
+            humidity == PERFECT_HUMIDITY &&
+            season != BAD_SEASON
 
-fun checkIsWeatherSuitable(weather: WeatherForBeans): String {
-    val isSuitable = weather.isSunny &&
-            weather.isAwningOpen &&
-            weather.humidity == 20 &&
-            weather.season != null &&
-            weather.season != "winter"
-
-    return "Благоприятные ли условия сейчас для роста бобовых? $isSuitable"
+    println("Благоприятные ли условия сейчас для роста бобовых? $isSuitable")
 }
