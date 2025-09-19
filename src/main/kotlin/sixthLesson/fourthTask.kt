@@ -3,7 +3,6 @@ package sixthLesson
 fun main() {
     var tryCounter = 5
     val guessedNumber = (1..9).random()
-    println(guessedNumber)
 
     while (tryCounter > 0) {
         println("У Вас пять попыток. Введите число:")
@@ -11,7 +10,7 @@ fun main() {
         if (inputValue != guessedNumber) {
             tryCounter--
             println("Неверно, осталось $tryCounter попыток")
-        } else if (inputValue == guessedNumber) {
+        } else {
             println("Это была великолепная игра!")
             break
         }
