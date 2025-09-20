@@ -5,6 +5,7 @@ fun main() {
     val userInput = readln().toInt()
     if (userInput < 6) {
         println("Длина пароля не может быть меньше 6 символов")
+        return
     }
     val pool = ('a'..'z') + ('A'..'Z') + ('0'..'9')
     var passw = ""
