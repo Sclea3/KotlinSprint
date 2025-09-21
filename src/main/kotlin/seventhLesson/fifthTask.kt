@@ -7,12 +7,22 @@ fun main() {
         println("Длина пароля не может быть меньше 6 символов")
         return
     }
-    val pool = ('a'..'z') + ('A'..'Z') + ('0'..'9')
+    val lowercase = ('a'..'z')
+    val uppercase = ('A'..'Z')
+    val digits = ('0'..'9')
+
     var passw = ""
 
-    for (i in 1..userInput) {
-        val charForPassw = pool.random().toString()
-        passw += charForPassw
+    passw += lowercase.random()
+    passw += uppercase.random()
+    passw += digits.random()
+
+    val pool = lowercase + uppercase + digits
+    for (i in 4..userInput) {
+        passw += pool.random()
     }
+
+    passw = passw.toList().shuffled().joinToString("")
+
     println(passw)
 }
