@@ -1,9 +1,9 @@
 package tenthLesson
 
 fun main() {
-    val userRoll = rollTheDice()
+    val userRoll = rollTheDice1()
     println("Бросок игрока: $userRoll")
-    val computerRoll = rollTheDice()
+    val computerRoll = rollTheDice1()
     println("Бросок компьютера: $computerRoll")
     when {
         userRoll > computerRoll -> println("Победило человечество")
@@ -12,6 +12,6 @@ fun main() {
     }
 }
 
-fun rollTheDice(): Int {
+fun rollTheDice1(): Int {
     return (1..6).random()
 }
